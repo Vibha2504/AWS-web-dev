@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviewer Testing Hub & Admin | CampusPass</title>
+  <meta name="description" content="Reviewer test matrix and admin management hub for campus event ticketing and QR check-in system.">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/scanner.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙️</text></svg>">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <a href="/" class="nav-brand">
+      <div class="brand-icon" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">⚙️</div>
+      <div class="brand-text">Reviewer<span>Hub</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/" class="nav-link">Participant Portal</a></li>
+      <li><a href="/organizer" class="nav-link">Organizer Scanner</a></li>
+      <li><a href="/admin" class="nav-link active">Admin / Reviewer Hub</a></li>
+    </ul>
+  </header>
+
+  <main class="container" style="padding-top: 2rem;">
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 style="font-size: 1.8rem; font-weight: 800;">Reviewer Testing Matrix & System Hub</h1>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">
+          One-click evaluation tools to verify all project requirements, security constraints, and database states.
+        </p>
+      </div>
+      <div>
+        <button id="btnResetDatabase" class="btn btn-secondary btn-sm" style="border-color: rgba(244, 63, 94, 0.4); color: #fb7185;">
+          🗑️ Reset & Re-Seed Database
+        </button>
+      </div>
+    </div>
+
+    <!-- Diagnostic Engine Status Cards -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
+        <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-subtle); font-weight: 700; margin-bottom: 0.4rem;">
+          Cryptographic Engine
+        </div>
+        <div style="font-size: 1.2rem; font-weight: 700; color: #34d399; display: flex; align-items: center; gap: 0.5rem;">
+          <span>🔒</span> HMAC-SHA256
+        </div>
+        <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.35rem;">
+          Timing-Safe Buffer Comparison Active
+        </div>
+      </div>
+
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
+        <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-subtle); font-weight: 700; margin-bottom: 0.4rem;">
+          Transactional Storage
+        </div>
+        <div style="font-size: 1.2rem; font-weight: 700; color: #38bdf8; display: flex; align-items: center; gap: 0.5rem;">
+          <span>🗄️</span> SQLite (WAL Mode)
+        </div>
+        <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.35rem;">
+          ACID Immediate Transactions & Locks
+        </div>
+      </div>
+
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
+        <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-subtle); font-weight: 700; margin-bottom: 0.4rem;">
+          Transactional Mailer
+        </div>
+        <div style="font-size: 1.2rem; font-weight: 700; color: #a78bfa; display: flex; align-items: center; gap: 0.5rem;">
+          <span>✉️</span> Nodemailer Engine
+        </div>
+        <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.35rem;">
+          Supports SMTP & Sandbox Auto-Preview
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Requirement Verification Matrix -->
+    <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.75rem; margin-bottom: 2rem;">
+      <h2 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">
+        🧪 Automated Project Requirements Test Matrix
+      </h2>
+      <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">
+        Click any test below to run live verification against the server and observe the exact HTTP responses.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+        
+        <!-- Requirement 1 Test -->
+        <div style="background: #090e1c; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; display: flex; flex-direction: column;">
+          <div style="font-size: 0.75rem; font-weight: 700; color: #38bdf8; text-transform: uppercase; margin-bottom: 0.35rem;">
+            Requirement 1: Capacity Limit
+          </div>
+          <strong style="font-size: 0.95rem; margin-bottom: 0.5rem;">Reject Over-Capacity Submissions</strong>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem; flex: 1;">
+            Attempts to register on the 3/3 capacity cybersecurity lab to verify HTTP 409 rejection.
+          </p>
+          <button id="btnTestCapacityRejection" class="btn btn-secondary btn-sm btn-block">
+            ▶️ Run Capacity Rejection Test
+          </button>
+        </div>
+
+        <!-- Requirement 2 Test -->
+        <div style="background: #090e1c; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; display: flex; flex-direction: column;">
+          <div style="font-size: 0.75rem; font-weight: 700; color: #34d399; text-transform: uppercase; margin-bottom: 0.35rem;">
+            Requirement 2 & 4: Valid Check-In
+          </div>
+          <strong style="font-size: 0.95rem; margin-bottom: 0.5rem;">First Valid Scan -> CHECKED-IN</strong>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem; flex: 1;">
+            Validates cryptographic HMAC signature and transitions attendee status to CHECKED-IN.
+          </p>
+          <button id="btnTestValidCheckIn" class="btn btn-secondary btn-sm btn-block">
+            ▶️ Run Valid Check-In Test
+          </button>
+        </div>
+
+        <!-- Requirement 3 Test -->
+        <div style="background: #090e1c; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; display: flex; flex-direction: column;">
+          <div style="font-size: 0.75rem; font-weight: 700; color: #fbbf24; text-transform: uppercase; margin-bottom: 0.35rem;">
+            Requirement 4: Anti-Duplication
+          </div>
+          <strong style="font-size: 0.95rem; margin-bottom: 0.5rem;">Subsequent Scan -> ALREADY USED</strong>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem; flex: 1;">
+            Re-scans a used ticket to verify duplicate scan rejection and check-in timestamp reporting.
+          </p>
+          <button id="btnTestDuplicateScan" class="btn btn-secondary btn-sm btn-block">
+            ▶️ Run Duplicate Scan Test
+          </button>
+        </div>
+
+        <!-- Requirement 4 Test -->
+        <div style="background: #090e1c; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; display: flex; flex-direction: column;">
+          <div style="font-size: 0.75rem; font-weight: 700; color: #fb7185; text-transform: uppercase; margin-bottom: 0.35rem;">
+            Requirement 4: Security & Tampering
+          </div>
+          <strong style="font-size: 0.95rem; margin-bottom: 0.5rem;">Counterfeit -> INVALID TICKET</strong>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem; flex: 1;">
+            Alters 1 byte of cryptographic signature to verify counterfeit detection alert.
+          </p>
+          <button id="btnTestTamperDetection" class="btn btn-secondary btn-sm btn-block">
+            ▶️ Run Tamper Detection Test
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Live Test Output Console -->
+      <div id="testOutputConsole" style="display: none; margin-top: 1.25rem; background: #030712; border: 1px solid #1e293b; border-radius: var(--radius-md); padding: 1rem; font-family: var(--font-mono); font-size: 0.8rem;">
+        <div style="display: flex; justify-content: space-between; color: var(--text-subtle); margin-bottom: 0.5rem;">
+          <span>Terminal Execution Log:</span>
+          <span id="testConsoleStatus">READY</span>
+        </div>
+        <pre id="testConsoleContent" style="color: #38bdf8; white-space: pre-wrap; margin: 0;"></pre>
+      </div>
+    </div>
+
+    <!-- Attendee Database Explorer -->
+    <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.75rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h2 style="font-size: 1.25rem; font-weight: 700;">Attendee Database Explorer</h2>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">View live attendee tickets, issued security tokens, and check-in statuses.</p>
+        </div>
+        <div>
+          <select id="adminEventFilter" class="form-select" style="padding: 0.45rem 1rem; width: 260px;">
+            <option value="1">HackSphere 2026</option>
+            <option value="2">AWS Cloud & DevOps</option>
+            <option value="3">AI Agents Summit</option>
+            <option value="4">PenTesting Lab (Limited 3)</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table class="audit-table">
+          <thead>
+            <tr>
+              <th>Ticket Code</th>
+              <th>Student Name</th>
+              <th>Email</th>
+              <th>Roll No / Dept</th>
+              <th>Status</th>
+              <th>Checked-In At</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="attendeeTableBody">
+            <tr>
+              <td colspan="7" style="text-align: center; color: var(--text-subtle); padding: 2rem;">Loading registered attendees...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <div id="toast-container"></div>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>

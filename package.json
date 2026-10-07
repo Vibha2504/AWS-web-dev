@@ -1,0 +1,32 @@
+{
+  "name": "campus-event-ticketing-system",
+  "version": "1.0.0",
+  "description": "Multi-page campus event ticketing system with cryptographically signed QR codes, automated transactional email dispatch, and real-time organizer webcam check-in portal.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node -e \"require('./src/db/seed').seedDatabase()\"",
+    "test": "node test/test-flow.js"
+  },
+  "keywords": [
+    "campus-events",
+    "qr-ticketing",
+    "webcam-scanner",
+    "cryptographic-signatures",
+    "nodemailer",
+    "better-sqlite3",
+    "express"
+  ],
+  "author": "Club Applicant",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "html5-qrcode": "^2.3.8",
+    "nodemailer": "^8.0.3",
+    "qrcode": "^1.5.4"
+  }
+}
