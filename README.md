@@ -142,8 +142,4 @@ Expected output:
 
 ---
 
-## 📖 Technical Handbook
 
-For full architectural breakdowns, mathematical cryptographic formulas, concurrency race condition analysis, and sample interview questions, refer to:
-
-👉 **[TECHNICAL_HANDBOOK.md](./TECHNICAL_HANDBOOK.md)**
